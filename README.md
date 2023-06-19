@@ -4,6 +4,16 @@
 # Description
 To-Do Application developed with Django Rest Framework.
 
+* Basic Authentication Enabled:
+   - username: **admin**
+   - password: **123456**
+
+ * Test this LIVE at:
+   
+   - Admin Section:  `https://sw4pn.pythonanywhere.com/admin/`
+   
+   - API URL :  `https://sw4pn.pythonanywhere.com/api/`
+
 ## End Points for Task
 
 * CREATE a todo item   * `POST /api/tasks/`
@@ -38,7 +48,8 @@ To-Do Application developed with Django Rest Framework.
   - create virtual environment:
     `virtualenv todo-env`
 
-  - start virtual environment: todo-env\Scripts\activate
+  - start virtual environment:
+    `todo-env\Scripts\activate`
 
 * Install dependencies
 
