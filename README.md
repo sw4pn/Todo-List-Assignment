@@ -29,26 +29,37 @@ To-Do Application developed with Django Rest Framework.
 ## Install the project dependencies
 
 * First create virtualenv
-  install virutal environment: pip install virtualenv
-  test installation: virtualenv --version
-  create virtual environment: virtualenv todo-env
+  - install virutal environment:
+    `pip install virtualenv`
+    
+  - test installation:
+    `virtualenv --version`
+    
+  - create virtual environment:
+    `virtualenv todo-env`
 
-  start virtual environment: todo-env\Scripts\activate
+  - start virtual environment: todo-env\Scripts\activate
 
 * Install dependencies
-  move to project dir: cd Todo-List-Assignment
-  enter the following command.
-  `pip install -r requirements.txt`
+
+  - move to project dir:
+    `cd Todo-List-Assignment`
+    
+  - enter the following command.
+    `pip install -r requirements.txt`
 
 ## Run the commands to generate the database
+
 `python manage.py makemigrations`
 
 `python manage.py migrate`
 
 ## Generate super user
+
 `python manage.py createsuperuser`
 
 ## Run the server
+
 `python manage.py runserver` 
 
 the application will be running on port 8000 **http://127.0.0.1:8000/**
