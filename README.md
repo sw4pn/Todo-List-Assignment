@@ -8,11 +8,15 @@ To-Do Application developed with Django Rest Framework.
    - username: **admin**
    - password: **123456**
 
+ * TEST with POSTMAN:
+
+   [VISIT POSTMAN COLLECTION](https://www.postman.com/sw4pn/workspace/work/collection/12386459-91065062-6e5b-403f-b6f5-7efa8a8ba6f4?action=share&creator=12386459)
+
  * Test this LIVE at:
    
-   - Admin Section:  `https://sw4pn.pythonanywhere.com/admin/`
+   - Admin Section:  [`https://sw4pn.pythonanywhere.com/admin/`](https://sw4pn.pythonanywhere.com/admin/)
    
-   - API URL :  `https://sw4pn.pythonanywhere.com/api/`
+   - API URL :  [`https://sw4pn.pythonanywhere.com/api/`](https://sw4pn.pythonanywhere.com/api/)
 
 ## End Points for Task
 
