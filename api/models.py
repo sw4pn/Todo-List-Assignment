@@ -2,16 +2,15 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from django.db import models
 
+# validate the due date
+
 
 def validate_due_date(value):
     if value and value <= timezone.now():
         raise ValidationError("Due date must be in the future.")
 
 
-# Create your models here.
-
 # Task model
-
 
 class Task(models.Model):
     STATUS_CHOICES = [

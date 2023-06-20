@@ -28,6 +28,7 @@ class TaskAdmin(admin.ModelAdmin):
     list_display = ["id", "title", "status",
                     "due_date", "display_tags",  "description", "timestamp", ]
     list_filter = ["status", "tags"]
+
     # Task should be searched by tag.name field, title, description
     search_fields = ["title", "description", "tags__name"]
 
