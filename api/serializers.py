@@ -13,6 +13,10 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
     status = serializers.ChoiceField(
         choices=Task.STATUS_CHOICES, required=True)
 
+    # tags should be shown as tags name instead of urls.
+    tags = serializers.SlugRelatedField(
+        slug_field='name', queryset=Tag.objects.all(), many=True)
+
     class Meta:
         model = Task
         fields = ["id", "status", "timestamp",
