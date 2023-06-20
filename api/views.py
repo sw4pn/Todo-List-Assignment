@@ -11,15 +11,16 @@ class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-    #   Convert the tags from string to hyperlinks
+    # Convert the tags from string to tag names
     @staticmethod
     def updateTags(tags_array, request):
         tags = []
         for tag_name in tags_array:
             tag_name = tag_name.lower()
             tag, created = Tag.objects.get_or_create(name=tag_name)
-            url_path = reverse('tag-detail', kwargs={'pk': tag.pk})
-            tags.append(request.build_absolute_uri(url_path))
+            # url_path = reverse('tag-detail', kwargs={'pk': tag.pk})
+            # tags.append(request.build_absolute_uri(url_path))
+            tags.append(tag.name)
         return tags
 
     # update tags and pass data for update
