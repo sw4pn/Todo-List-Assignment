@@ -23,7 +23,6 @@ class Task(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
-    due_date = models.DateTimeField(blank=True, null=True)
     due_date = models.DateTimeField(
         blank=True, null=True, validators=[validate_due_date])
     tags = models.ManyToManyField("Tag", blank=True)
