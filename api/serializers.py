@@ -9,6 +9,9 @@ class TagSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
+    # status field is a mandatory field.
+    status = serializers.ChoiceField(
+        choices=Task.STATUS_CHOICES, required=True)
 
     class Meta:
         model = Task
