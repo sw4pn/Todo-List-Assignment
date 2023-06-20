@@ -5,7 +5,7 @@ from .models import Task, Tag
 class TagSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Tag
-        fields = "__all__"
+        fields = ["id","name"]
 
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
@@ -15,7 +15,8 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Task
-        fields = "__all__"
+        fields = ["id", "status", "timestamp",
+                  "title", "description", "due_date", "tags"]
         read_only_fields = ['id', 'timestamp']
 
     def update(self, instance, validated_data):
